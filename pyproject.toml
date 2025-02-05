@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "pfund-plugins"
+version = "0.0.1.dev1"
+description = "lightweight plugins for pfund's ecosystem, e.g. LLM"
+authors = ["Stephen Yau <softwareentrepreneer+pfund-plugins@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+litellm = {version = "^1.60.2", optional = true}
+
+[tool.poetry.extras]
+llm = ["litellm"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
