@@ -11,5 +11,5 @@ pip install pfund-plugins[llm]
 
 ## Supported Plugins
 
-- `llm`: llm plugins
+- `llm`: llm plugins using `litellm`
 <!-- - `gpu`: gpu plugins -->
