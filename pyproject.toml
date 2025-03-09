@@ -1,18 +1,21 @@
-[tool.poetry]
+[project]
 name = "pfund-plugins"
 version = "0.0.1.dev1"
 description = "lightweight plugins for pfund's ecosystem, e.g. LLM"
-authors = ["Stephen Yau <softwareentrepreneer+pfund-plugins@gmail.com>"]
+authors = [
+    { name="Stephen Yau", email="softwareentrepreneer+pfund-plugins@gmail.com" }
+]
 readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "unitycatalog-ai (>=0.1.0,<0.2.0)",
+]
 
-[tool.poetry.dependencies]
-python = "^3.10"
-litellm = {version = "^1.60.4", optional = true}
-unitycatalog-ai = "^0.1.0"
-
-[tool.poetry.extras]
-llm = ["litellm"]
+[project.optional-dependencies]
+llm = [
+    "litellm (>=1.60.4,<2.0.0)",
+]
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
